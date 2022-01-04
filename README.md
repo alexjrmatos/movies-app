@@ -9,3 +9,5 @@ Informações dos filmes obtidas via API do [TMDb](https://www.themoviedb.org/).
 
 Inicia a aplicação localmente.\
 Use [http://localhost:3000](http://localhost:3000) para verificá-lo.
+
+Obs.: Por se tratar de um projeto demo a chave da aplicação se encontra no projeto mas *não faça isso em produção*. 
