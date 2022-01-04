@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import Movie from './components/Movie'
+const dotenv = require('dotenv').config();
 
 const featured_api =
-  'https://api.themoviedb.org/3/discover/movie?api_key=d75d2931c9e3b4f869f39ded672cb3cb&sort_by=popularity.desc&page=1&language=pt-BR'
+  `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.API_KEY}&sort_by=popularity.desc&page=1&language=pt-BR`
 
 const search_api =
-  'https://api.themoviedb.org/3/search/movie?api_key=d75d2931c9e3b4f869f39ded672cb3cb&language=pt-BR&query='
+  `https://api.themoviedb.org/3/search/movie?api_key=${process.env.API_KEY}&language=pt-BR&query=`
 
 function App () {
   const [movies, setMovies] = useState([])
