@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import Movie from './components/Movie'
+import React, { useEffect, useState } from 'react';
+import Movie from './components/Movie';
 
 const featured_api =
-  `https://api.themoviedb.org/3/discover/movie?api_key=d75d2931c9e3b4f869f39ded672cb3cb&sort_by=popularity.desc&page=1&language=pt-BR`
+  `https://api.themoviedb.org/3/discover/movie?api_key=d75d2931c9e3b4f869f39ded672cb3cb&sort_by=popularity.desc&page=1&language=pt-BR`;
 
 const search_api =
-  `https://api.themoviedb.org/3/search/movie?api_key=d75d2931c9e3b4f869f39ded672cb3cb&language=pt-BR&query=`
+  `https://api.themoviedb.org/3/search/movie?api_key=d75d2931c9e3b4f869f39ded672cb3cb&language=pt-BR&query=`;
 
 function App () {
   const [movies, setMovies] = useState([])
@@ -43,11 +43,13 @@ function App () {
         <form onSubmit={handleOnSubmit}>
           <input
             className='search'
-            placeholder='Buscar filmes...'
+            placeholder='Buscar filmes'
             value={searchTerm}
             onChange={handleOnChange}
           />
         </form>
+
+        <a href="./index.html" className='home-button'>Início</a>
       </header>
       <div className='movie-container'>
         {movies.map(movie => (
@@ -56,6 +58,6 @@ function App () {
       </div>
     </>
   )
-}
+};
 
-export default App
+export default App;
